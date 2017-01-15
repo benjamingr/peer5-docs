@@ -25,6 +25,9 @@ We support many common players, such as:
 - [Flowplayer](players/flowplayer/)
 - [Shaka Player](players/shaka-player/)
 - [Kaltura](players/kaltura/)
+- [Radiant](players/radiant/)
+- [Bitmovin](players/bitmovin/)
+- [Theoplayer](players/theoplayer/)
 
 Please visit [Our integration page](https://app.peer5.com/integration) for assistance 
 or contact us if our current solution doesn't fit your needs.
