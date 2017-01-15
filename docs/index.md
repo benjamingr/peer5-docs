@@ -13,6 +13,9 @@
     - [Flowplayer](players/flowplayer/)
     - [Shaka Player](players/shaka-player/)
     - [Kaltura](players/kaltura/)
+    - [Radiant](players/radiant/)
+    - [Bitmovin](players/bitmovin/)
+    - [Theoplayer](players/theoplayer/)
 - **Custom Integration Cases**
     - [Google Tag Manager](guides/google-tag-manager/)
 - **Guides**
