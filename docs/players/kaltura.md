@@ -24,7 +24,7 @@ Integration is made through Kaltura's dashboard, follow this steps to integrate 
 ---
 
 #### **6\.** Paste the plugin string
-  go to [your account](https://app.peer5.com/#kaltura) and get your personal string
+  go to [your account](https://app.peer5.com/integration#kaltura) and get your personal string
 
 #### **7\.** Click on the import button
 
