@@ -1,3 +1,10 @@
+var ls = localStorage;
+var d = document;
+if (d.referrer && d.referrer.indexOf(d.location.origin) === -1) {
+    ls.referrer = d.referrer;
+    document.cookie = 'referrer=' + d.referrer + '; path=/; expires=Thu, 01 Jan 2030 00:00:00 GMT; domain=.peer5.com';
+}
+
 (function() {
     var w = window;
     var ic = w.Intercom;
