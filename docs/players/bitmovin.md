@@ -34,7 +34,7 @@ The following information needs to be filled according to your actual data:
         <script src="//api.peer5.com/peer5.bitmovin.plugin.js"></script>
         
         <!-- Bitmovin script -->
-        <script src="//bitmovin-a.akamaihd.net/bitmovin-player/stable/6/bitmovinplayer.min.js"></script>;
+        <script src="//bitmovin-a.akamaihd.net/bitmovin-player/stable/6/bitmovinplayer.min.js"></script>
         
     </head>
     <body>
