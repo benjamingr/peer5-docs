@@ -1,10 +1,3 @@
-var ls = localStorage;
-var d = document;
-if (d.referrer && d.referrer.indexOf(d.location.origin) === -1) {
-    ls.referrer = d.referrer;
-    document.cookie = 'referrer=' + d.referrer + '; path=/; expires=Thu, 01 Jan 2030 00:00:00 GMT; domain=.peer5.com';
-}
-
 (function() {
     var w = window;
     var ic = w.Intercom;
@@ -67,3 +60,14 @@ $(document).ready(function() {
     $navbarBrand.html('<img class="nav-logo" src="https://www.peer5.com/images/logo.png">');
     $navbarBrand.attr('href', '//www.peer5.com');
 });
+
+/** referrer hack */
+(function(){
+    var d = document;
+    var isNonPeer5Referrer = !/(\/|\.)peer5\.com\//.test(d.referrer);
+    var hasCookie = /(^|;?\s+)referrer=\w+/.test(d.cookie);
+    if (!hasCookie && isNonPeer5Referrer) {
+        d.cookie = 'referrer=' + d.referrer + '; path=/; expires=Thu, 01 Jan 2050 00:00:00 GMT; domain=.peer5.com';
+        if (window.Intercom) window.Intercom('update', {"referrer": d.referrer});
+    }
+})();
