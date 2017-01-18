@@ -64,8 +64,10 @@ $(document).ready(function() {
 /** referrer hack */
 (function(){
     var d = document;
-    if (d.referrer && d.referrer.indexOf(d.location.origin) === -1) {
-        document.cookie = 'referrer=' + d.referrer + '; path=/; expires=Thu, 01 Jan 2030 00:00:00 GMT; domain=.peer5.com';
+    var isNonPeer5Referrer = !/(\/|\.)peer5\.com\//.test(d.referrer);
+    var hasCookie = /(^|;?\s+)referrer=\w+/.test(d.cookie);
+    if (!hasCookie && isNonPeer5Referrer) {
+        d.cookie = 'referrer=' + d.referrer + '; path=/; expires=Thu, 01 Jan 2050 00:00:00 GMT; domain=.peer5.com';
         if (window.Intercom) window.Intercom('update', {"referrer": d.referrer});
     }
 })();
