@@ -62,6 +62,12 @@ Yes. Peer5 works with DRM. Our P2P CDN is completely agnostic to content protect
 
 # Video CDN Technology
 
+**Why is Peer5 the Serverless CDN?** 
+
+We coined the term “Serverless CDN” because no servers are involved in the delivery of bytes through our network. However, we don’t aim to completely get rid of servers. Servers do the important work of ingesting, encoding, transmuxing and more. We believe that the optimal content delivery solution for broadcasters is a hybrid model where Peer5 is used in combination with their existing HTTP-based CDNs. Our goal is to enable limitless video delivery by unifying the existing server infrastructure with an elastic computing layer (comprised of individual viewers) that grows with demand.
+
+---
+
 **How does Peer5 work?** 
 
 Peer5 works alongside of a publisher’s origin server, CDN or Multi-CDN architecture. We use WebRTC to create a peer-to-peer mesh network that helps users load video content from each other. Our hybrid switching algorithm determines whether a viewer should load the next segment from Peer5’s p2p network or the publisher’s alternative delivery system. This allows Peer5 to shrink a content provider’s bandwidth usage, while also maximizing a user’s viewing experience.
