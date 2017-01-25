@@ -36,6 +36,18 @@ or use self hosted media servers such as:
  
 ---
 
+**What is WebRTC?** 
+
+If you know what the Internet and the World Wide Web are, then you’ve heard about [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol). What you might not know is that HTTP is based on a client-server communication model – an HTTP client (web browser) makes a request to an HTTP server and gets a response. For years, the only communication protocol that web browsers supported was HTTP. This meant that browsers could only communicate with HTTP servers. While this client-server communication model has enabled the Web to become the world changing communication network that it is today, we’re beginning to see strains in the system, mostly driven by the explosive growth of streaming video.
+
+Today, video accounts for 70% of all Internet traffic and broadcasters are already encountering huge scalability and stream quality issues due to the client-server HTTP approach. Basically, it is becoming impossible to deploy HTTP servers fast enough to keep up with the demand from HTTP clients.
+
+A different approach was needed and into the void stepped Google with [WebRTC](https://webrtc.org/) which enables individual web browsers to communicate directly with each other, without having to pass through an intervening server. Google Hangouts is built on top of WebRTC, as are services such as Snapchat, Whatsapp and Facebook Messenger. While it is not widely recognized (even among people in the computing industry), we believe that WebRTC will eventually become as important to the Internet as HTTP. In fact, WebRTC has already been incorporated into the [HTML5](http://www.w3schools.com/html/html5_intro.asp) standard and it is supported in every version of Chrome, Firefox and Opera, with Microsoft Edge and Apple Safari support coming in 2017.
+
+When Google introduced WebRTC back in 2012, we saw an opportunity to create a truly seamless p2p service, one that did not require end users to install a proprietary p2p client. Now that WebRTC is broadly deployed, our vision of creating a massively distributed, infinitely scalable and geographically ubiquitous video CDN has been realized!
+
+---
+
 **How do I disable Peer5 on a specific page?** 
 
 In order to disable the Peer5 technology for specific pages, you can use our Javascript API to [disable](https://docs.peer5.com/guides/configuring-peer5/#disabling-p2p) and [enable](https://docs.peer5.com/guides/configuring-peer5/#enabling-p2p) Peer5.
