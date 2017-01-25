@@ -117,15 +117,15 @@ No. In order to use peer5, a proper HLS/DASH stream is needed - we recommend usi
 
 Peer Efficiency is the percentage of content delivery that is offloaded to the P2P network at a given time. HTTP-based CDNs use the term “cache hit ratio”, which is a very similar concept. CDNs usually measure the ratio as requests served from the CDN divided by the total number of requests. Peer Efficiency is calculated by dividing the number of bytes delivered from the P2P network by the total number of bytes delivered (P2P + HTTP). As Peer Efficiency increases, one is able to achieve massive scalability gains while simultaneously improving the stream quality for each viewer, as illustrated in the table below where we assume viewers receive a 1 Mbps stream from a single origin server:
 
-           Peer Efficiency        Avg p2p Bitrate       Avg HTTP Bitrate       Increase in Scalability
-            (% Off-load)	             (Mbps)                (Mbps)
-
-                0	                     0.00	                 1.00	                      None
-                50	                    0.50	                 0.50	                       2X
-                90	                    0.90	                 0.10	                      10X
-                98	                    0.98	                 0.02	                      50X
-                99	                    0.99	                 0.01	                     100X
-                99.9	                  0.999	                0.001	                   1000X
+|Peer Efficiency|Avg p2p Bitrate|Avg HTTP Bitrate|Increase in Scalability|
+|---------------|---------------|----------------|-----------------------|
+|(% Off-load)|(Mbps)|(Mbps)|
+|0|0.00|1.00|None|
+|50|0.50|0.50|2X|
+|90|0.90|0.10|10X|
+|98|0.98|0.02|50X|
+|99|0.99|0.01|100X|
+|99.9|0.999|0.001|1000X|
 
 If you’re able to off-load half of the requests for segments to the P2P network (50% Peer Efficiency), then your origin server is working 50% less than it was before and you can now service an audience that is twice (2x) as large without having to deploy additional hardware. If peer efficiency reaches 99%, then your server is doing 1% of the work it previously did and you can now service an audience that is 100x bigger (1 / 0.01 = 100). Because it is a logarithmic function, small gains in Peer Efficiency (e.g., from 99% to 99.9%) result in an order of magnitude improvement in scalability (100X to 1000X).
 
