@@ -33,6 +33,12 @@ or use self hosted media servers such as:
 - [wowza](https://www.wowza.com/)
 - [nimble](https://wmspanel.com/nimble)
 - [nginx-rtmp-module](https://github.com/arut/nginx-rtmp-module)
+
+---
+
+**How do I integrate Peer5 with my existing video streaming service?** 
+
+Peer5 is integrated with a broadcaster’s existing infrastructure by deploying two lines of Javascript on the web page where the video player resides. This client side Javascript implements a hybrid switcher. Once Peer5 is integrated, users can fetch video segments from either an edge server or from their peer group, depending on which channel is performing better at that given moment in time. As more chunk requests are handled by the peer group (a notion that we define as "Peer Efficiency"), the broadcaster sees dramatic reductions in server load and, consequently, higher stream quality (faster load times, less buffering, longer viewing sessions) for all viewers.
  
 ---
 
