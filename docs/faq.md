@@ -108,7 +108,6 @@ The platform is scalable thanks to the P2P aspect of our content distribution pr
 ---
 
 **Is it possible to stream video from one peer to another without using a server?** 
-
 No. In order to use peer5, a proper HLS/DASH stream is needed - we recommend using [nimble](https://wmspanel.com/nimble) as server software
 
 ---
