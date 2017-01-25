@@ -6,8 +6,7 @@ Need extra help? <a href="javascript:Intercom('show')">Chat with us</a> or [send
 
 **Why is my stream is not accepted/is invalid?** 
 
-In order to use peer5 you will need either an HLS stream or an MPEG-DASH stream.  
- unlike regular video files, these streams have a manifest file as their entry point.
+In order to use peer5 you will need either an HLS stream or an MPEG-DASH stream. Unlike regular video files, these streams have a manifest file as their entry point.
   
 - HLS - `.m3u8` manifest file.  
 - DASH - `.mpd` manifest file.
