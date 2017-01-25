@@ -55,6 +55,16 @@ Yes. But please note that users may not be allowed to upload content from mobile
 
 ---
 
+**How secure is the Peer5 service?** 
+
+Peer5 uses the [WebRTC data channel](https://www.html5rocks.com/en/tutorials/webrtc/datachannels/) to transfer data between users. The data channel is secured using [SCTP](https://en.wikipedia.org/wiki/Stream_Control_Transmission_Protocol) protocols and [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) encryption. Communication with the Peer5 backend is done via secured WebSocket, which also uses TLS encryption.
+
+Existing content protection and geo-fencing schemes remain the same when Peer5 is enabled. Each user session starts with a standard client-server exchange, manifest request and media request. P2P activity only starts to work after the user is authorized. The server sees the same exact requests (tokens, keys, cookies, etc.) with and without Peer5.
+
+Peer5 does not interfere with DRM and stream encryption since the segments sent between users are the same as the segments that users receive from the edge server. The Peer5 service doesn't compromise the stream in any way, since the only users that view the stream have already been authenticated by the server and have received a decryption key - which, importantly, isn't transferred through the Peer5 network. Content is also never stored locally or in any persistent data storage.
+
+---
+
 **Does Peer5 work with DRM?** 
 
 Yes. Peer5 works with DRM. Our P2P CDN is completely agnostic to content protection.
