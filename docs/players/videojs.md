@@ -48,5 +48,4 @@ The following information needs to be filled according to your actual data:
     </html>
 ```
 
-
 Visit the the full VideoJS docs [here](http://docs.videojs.com/)

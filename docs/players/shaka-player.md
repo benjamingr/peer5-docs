@@ -48,4 +48,4 @@ The following information needs to be filled according to your actual data:
 </html>
 ```
 
-visit [here](https://github.com/google/shaka-player) for the full Shaka Player docs
+Visit [here](https://github.com/google/shaka-player) for the full Shaka Player docs
