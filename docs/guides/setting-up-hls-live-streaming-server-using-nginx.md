@@ -324,3 +324,11 @@ With Peer5 plugin (get your API key [here](https://app.peer5.com/register)):
 ```
 
 It's alive!
+
+## 6. Add Peers
+
+Now that we are pushing an HLS stream into nginx, we need to make the most of your server capacity. 
+
+To do this, add a P2P layer on top of your servers to maximize your site's scalability and ability to deliver high-quality video streams. Adding Peer5 on top of your nginx server will do all of this and more. With nginx and CORS already set up, integrating Peer5 is as simple as grabbing some JavaScript and clicking copy-and-paste.
+
+[ADD PEERS NOW](https://app.peer5.com/register)
