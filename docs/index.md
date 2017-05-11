@@ -23,6 +23,5 @@
     - [How to optimize Wowza server](guides/how-to-optimize-wowza-server/)
     - [Setting up HLS live streaming server using NGINX](guides/setting-up-hls-live-streaming-server-using-nginx/)
     - [Setting up CORS](guides/cors/)
-    - [Configuring Peer5](guides/configuring-peer5/)
     - [Migrate From Flash](guides/migrate-from-flash/)
     - [Use NGINX as warm Wowza cache](guides/use-nginx-as-wowza-cache/)
