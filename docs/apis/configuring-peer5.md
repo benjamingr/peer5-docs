@@ -24,7 +24,7 @@ Any requests made using `peer5.Request` after enabling P2P will fully utilize th
 ## Upload Toggle
 
 In some cases its required that P2P is used only for downloading without uploading.
-upload is on by default for all non-cellular network users.  
+Upload is on by default for all non-cellular network users.  
 Disabling P2P upload manually can be achieved like so:
 
 ```javascript
@@ -32,6 +32,7 @@ peer5.configure({upload: false});
 ```
 
 Re-enabling upload:
+
 ```javascript
 peer5.configure({upload: true});
 ```

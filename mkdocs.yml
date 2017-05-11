@@ -28,5 +28,5 @@ pages:
     - 'Use NGINX as warm Wowza cache': 'guides/use-nginx-as-wowza-cache.md'
     - 'Google Tag Manager': 'guides/google-tag-manager.md'
 - APIs:
-    - 'stats': 'apis/get-stats.md'
-    - 'Configuring the Peer5 libarary': 'apis/configuring-peer5.md'
+    - '.getStats()': 'apis/get-stats.md'
+    - '.configure()': 'apis/configuring-peer5.md'
