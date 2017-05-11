@@ -55,7 +55,7 @@ When Google introduced WebRTC back in 2012, we saw an opportunity to create a tr
 
 **How do I disable Peer5 on a specific page?** 
 
-In order to disable the Peer5 technology for specific pages, you can use our Javascript API to [disable](https://docs.peer5.com/guides/configuring-peer5/#disabling-p2p) and [enable](https://docs.peer5.com/guides/configuring-peer5/#enabling-p2p) Peer5.
+In order to disable the Peer5 technology for specific pages, you can use our [Javascript API](/apis/configuring-peer5/#p2p-toggle) to disable and enable Peer5.
  
 ---
 
@@ -67,7 +67,9 @@ Peer5 currently supports HLS and MPEG Dash streaming protocols. We also support 
 
 **Does Peer5 work on mobile devices?** 
 
-Yes. But please note that users may not be allowed to upload content from mobile devices. Even if a specific user cannot upload streams, they can still download content. We make our upload decisions based on a variety of factors, including but not limited to a user’s available resources, upload capacity and type of network (cellular or other).
+Yes. Mobile devices will not upload data if they are on cellular networks, but they can still benefit from P2P by downloading from other peers.
+We make our upload decisions based on a variety of factors, including but not limited to a user’s available resources, upload capacity and type of network (cellular or other).
+To change the default behavior of mobile/cellular peers you can use the [deployment section](https://app.peer5.com/deployment) of your account's dashboard or the [Javascript API](/apis/configuring-peer5/#p2p-toggle)
 
 ---
 
