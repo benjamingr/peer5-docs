@@ -58,4 +58,4 @@ The following information needs to be filled according to your actual data:
 ```
 
 
-Visit the the full Radiant Media Player docs [here](https://www.radiantmediaplayer.com/documentation.html)
+Visit the full Radiant Media Player docs [here](https://www.radiantmediaplayer.com/documentation.html)

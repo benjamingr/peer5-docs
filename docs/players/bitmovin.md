@@ -59,4 +59,4 @@ The following information needs to be filled according to your actual data:
 ```
 
 
-Visit the the full Bitmovin docs [here](https://bitmovin.com/player-documentation/)
+Visit the full Bitmovin docs [here](https://bitmovin.com/player-documentation/)

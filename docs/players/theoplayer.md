@@ -44,4 +44,4 @@ The following information needs to be filled according to your actual data:
 ```
 
 
-Visit the the full Theoplayer docs [here](https://support.theoplayer.com/hc/en-us)
+Visit the full Theoplayer docs [here](https://support.theoplayer.com/hc/en-us)
