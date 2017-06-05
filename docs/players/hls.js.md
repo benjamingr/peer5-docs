@@ -3,13 +3,13 @@
 <br>
 ![](./images/hlsjs.png)
 <br><br>
-[Hls.js](https://github.com/video-dev/hls.js) is an Open source HLS player.
+[Hls.js](https://github.com/video-dev/hls.js) is an open source HLS player.
 
 The integration with Peer5 plugin is as easy as it can get.  
-In addition to the player script, include Peer5 client and Hls.js plugin.
+In addition to the player script, include the Peer5 client and the Peer5 hls.js plugin.
  
 ## Peer5 client and plugins scripts
-add these two scripts to the `head` of your player's page
+Add these two scripts to the `head` of your player's page
 
      <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
      <script src="//api.peer5.com/peer5.hlsjs.plugin.js"></script>
