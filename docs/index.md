@@ -16,6 +16,7 @@
     - [Radiant](players/radiant/)
     - [Bitmovin](players/bitmovin/)
     - [Theoplayer](players/theoplayer/)
+    - [Hls.js](players/hls.js/)
 - **Custom Integration Cases**
     - [Google Tag Manager](guides/google-tag-manager/)
 - **Guides**

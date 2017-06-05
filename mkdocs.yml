@@ -19,6 +19,7 @@ pages:
     - 'Radiant': 'players/radiant.md'
     - 'Bitmovin': 'players/bitmovin.md'
     - 'Theoplayer': 'players/theoplayer.md'
+    - 'Hls.js': 'players/hls.js.md'
 - Guides:
     - 'HLS with Nimble': 'guides/hls-with-nimble.md'
     - 'How to optimize Wowza server': 'guides/how-to-optimize-wowza-server.md'
