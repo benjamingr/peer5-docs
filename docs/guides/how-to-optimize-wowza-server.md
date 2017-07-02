@@ -7,7 +7,7 @@ If don't already have a running Wowza server please follow one of the following 
 
 *This guide assumes HLS, DASH integration is performed in a similar fashion.
 
-In order for end-users to efficiently transmit segments a few configuration changes are required. The default number of segments, the segment length and the number of chunks can be set to values that are friendlier to use transmission.
+In order for end-users to efficiently transmit segments a few configuration changes are required. The default number of segments, the segment length and the number of chunks can improve overall user experience and peer-to-peer performance.
 
 The default Wowza HLS configuration value is to return 3 segments in each playlist - each 10 seconds long.  
 We’d like to configure it to 20 segments, 5 seconds long each instead.  
@@ -23,7 +23,7 @@ b. **segment sizes**
 Under your `live application > Properties > Cupertino stream packetizer`  
 set `cupertinoChunkDurationTarget` to 5000
 
-c. **number of chunks**  
+c. **number of stored chunks**  
 Under your `live application > Properties > Cupertino stream packetizer`  
 set `cupertinoMaxChunkCount` to 30
 ![](./images/wowza/image00.png)
