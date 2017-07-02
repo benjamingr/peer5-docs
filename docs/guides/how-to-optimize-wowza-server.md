@@ -1,14 +1,15 @@
 ## How to optimize Wowza server for Peer5
 
-If don't already have a running Wowza server follow one of these:
+If don't already have a running Wowza server please follow one of the following guides:
 
 - [Getting started](https://www.wowza.com/forums/content.php?721-getting-started) with Wowza Streaming Cloud
 - [Getting started](https://www.wowza.com/forums/content.php?625-How-to-get-started-as-a-Wowza-Streaming-Engine-Manager-administrator) with Wowza Streaming Engine (self hosted)
 
-*This guide assumes HLS, although DASH will be very similar.
+*This guide assumes HLS, DASH integration is performed in a similar fashion.
 
-In order for end-users to efficiently transfer segments we’d want to configure the number of segments and segment length a bit differently than default.  
-Default HLS config is 3 segments, 10 seconds long each.  
+In order for end-users to efficiently transmit segments a few configuration changes are required. The default number of segments, the segment length and the number of chunks can be set to values that are friendlier to use transmission.
+
+The default Wowza HLS configuration value is to return 3 segments in each playlist - each 10 seconds long.  
 We’d like to configure it to 20 segments, 5 seconds long each instead.  
 We will also add [CORS](https://docs.peer5.com/guides/cors/). This can be done either from the UI or by editing the XML.
 
@@ -22,6 +23,9 @@ b. **segment sizes**
 Under your `live application > Properties > Cupertino stream packetizer`  
 set `cupertinoChunkDurationTarget` to 5000
 
+c. **number of chunks**  
+Under your `live application > Properties > Cupertino stream packetizer`  
+set `cupertinoMaxChunkCount` to 30
 ![](./images/wowza/image00.png)
 	
 c. **CORS**
@@ -52,6 +56,11 @@ Open the file with a text editor, In the XML under **`Root/Application/LiveStrea
 </Property>
 <Property>
     <Name>cupertinoPlaylistChunkCount</Name>
+    <Value>30</Value>
+    <Type>Integer</Type>
+</Property>
+<Property>
+    <Name>cupertinoMaxChunkCount</Name>
     <Value>30</Value>
     <Type>Integer</Type>
 </Property>
