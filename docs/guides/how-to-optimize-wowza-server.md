@@ -9,18 +9,18 @@ If don't already have a running Wowza server follow one of these:
 
 In order for end-users to efficiently transfer segments we’d want to configure the number of segments and segment length a bit differently than default.  
 Default HLS config is 3 segments, 10 seconds long each.  
-We’d like to configure it to 10 segments, 3 seconds long each instead.  
-We will also add CORS. This can be done either from the UI or by editing the XML.
+We’d like to configure it to 20 segments, 5 seconds long each instead.  
+We will also add [CORS](https://docs.peer5.com/guides/cors/). This can be done either from the UI or by editing the XML.
 
 ### __Option 1: From the Wowza UI__
 
 a. **playlist length**  
 Under your `live application > Properties > Cupertino stream packetizer`  
-set `cupertinoPlaylistChunkCount` to 10
+set `cupertinoPlaylistChunkCount` to 20
 
 b. **segment sizes**  
 Under your `live application > Properties > Cupertino stream packetizer`  
-set `cupertinoChunkDurationTarget` to 3000
+set `cupertinoChunkDurationTarget` to 5000
 
 ![](./images/wowza/image00.png)
 	
@@ -47,12 +47,12 @@ Open the file with a text editor, In the XML under **`Root/Application/LiveStrea
 ```xml
 <Property>
     <Name>cupertinoChunkDurationTarget</Name>
-    <Value>3000</Value>
+    <Value>5000</Value>
     <Type>Integer</Type>
 </Property>
 <Property>
     <Name>cupertinoPlaylistChunkCount</Name>
-    <Value>10</Value>
+    <Value>30</Value>
     <Type>Integer</Type>
 </Property>
 ```
@@ -66,5 +66,3 @@ Under **`Root/Application/HTTPStreamer/Properties`** add the following property:
 	<Type>String</Type>
 </Property>
 ```
-
-
