@@ -57,5 +57,24 @@ Visit the full Hls.js docs [here](https://github.com/video-dev/hls.js/blob/maste
 
 ## Custom Hls.js Based players
 
-Its also possible to integrate Peer5 with custom players that are based on Hls.js.
-For the integration to work, the `Hls` global must be exposed, and the `peer5.hlsjs.plugin.js` must be loaded before the player is initiated (e.g. before `new Hls()`).
+Its also possible to integrate Peer5 with custom players that are based on Hls.js.  
+If you use bundled setup where `Hls.js` is required without being exposed globally, use this alternative setup:
+
+include these scripts
+```html
+    <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+    <script src="//api.peer5.com/peer5.hlsjs.loader.js"></script>
+```
+
+
+then pass the peer5 loader to `Hls.js` constructor 
+```js
+var Hls = require('hls.js');
+var instance = new Hls({loader: window.peer5.HlsJsLoader});
+```
+
+or using es6 syntax
+```js
+import Hls from 'hls.js';
+const instance = new Hls({loader: window.peer5.HlsJsLoader});
+```
