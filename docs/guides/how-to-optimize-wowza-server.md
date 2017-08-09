@@ -33,7 +33,7 @@ Under your `live application > Properties > Custom > Edit > Add Customer Propert
 set `Path` to `/Root/Application/HTTPStreamer`  
 set `Name` to `cupertinoUserHTTPHeaders`  
 set `Type` to `String`  
-set `Value` to `ACCESS-CONTROL-ALLOW-ORIGIN:*|ACCESS-CONTROL-EXPOSE-HEADERS:content-length|ACCESS-CONTROL-ALLOW-HEADERS:range`
+set `Value` to `ACCESS-CONTROL-ALLOW-ORIGIN:*|ACCESS-CONTROL-EXPOSE-HEADERS:content-length`
 
 
 ![](./images/wowza/image01.png)
@@ -71,7 +71,7 @@ Under **`Root/Application/HTTPStreamer/Properties`** add the following property:
 ```xml
 <Property>
     <Name>cupertinoUserHTTPHeaders</Name>
-    <Value>ACCESS-CONTROL-ALLOW-ORIGIN:*|ACCESS-CONTROL-EXPOSE-HEADERS:content-length|ACCESS-CONTROL-ALLOW-HEADERS:Range</Value>
+    <Value>ACCESS-CONTROL-ALLOW-ORIGIN:*|ACCESS-CONTROL-EXPOSE-HEADERS:content-length</Value>
 	<Type>String</Type>
 </Property>
 ```

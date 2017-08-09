@@ -13,8 +13,7 @@ Peer5 needs CORS to get the video segments from your server:
 1. Open your config file (Usually located at `/etc/nimble/nimble.conf`).
 2. Add the following lines at the bottom of the file:
 	+ `access_control_allow_origin = *`
-	+ `access_control_allow_headers = Range`
-	+ `access_control_expose_headers = Content-Length, Content-Range`
+	+ `access_control_expose_headers = Content-Length`
 3. Save the file.
 4. Restart the nimble service using this command: `sudo service nimble restart`.
 
