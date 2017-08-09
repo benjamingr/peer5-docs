@@ -84,13 +84,11 @@ server {
 
         # CORS setup
         add_header 'Access-Control-Allow-Origin' '*' always;
-        add_header 'Access-Control-Expose-Headers' 'Content-Length,Content-Range';
-        add_header 'Access-Control-Allow-Headers' 'Range';
+        add_header 'Access-Control-Expose-Headers' 'Content-Length';
 
         # allow CORS preflight requests
         if ($request_method = 'OPTIONS') {
             add_header 'Access-Control-Allow-Origin' '*';
-            add_header 'Access-Control-Allow-Headers' 'Range';
             add_header 'Access-Control-Max-Age' 1728000;
             add_header 'Content-Type' 'text/plain charset=UTF-8';
             add_header 'Content-Length' 0;
@@ -153,13 +151,11 @@ http {
 
             # CORS setup
             add_header 'Access-Control-Allow-Origin' '*' always;
-            add_header 'Access-Control-Expose-Headers' 'Content-Length,Content-Range';
-            add_header 'Access-Control-Allow-Headers' 'Range';
+            add_header 'Access-Control-Expose-Headers' 'Content-Length';
 
             # allow CORS preflight requests
             if ($request_method = 'OPTIONS') {
                 add_header 'Access-Control-Allow-Origin' '*';
-                add_header 'Access-Control-Allow-Headers' 'Range';
                 add_header 'Access-Control-Max-Age' 1728000;
                 add_header 'Content-Type' 'text/plain charset=UTF-8';
                 add_header 'Content-Length' 0;
