@@ -31,7 +31,7 @@ The following information needs to be filled according to your actual data:
         <script src="//api.peer5.com/peer5.clappr.plugin.js"></script>
         
         <!-- clappr script -->
-        <script src="//cdn.clappr.io/latest/clappr.js"></script>
+        <script src="//cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
     </head>
     <body>
         <div id="player"></div>
