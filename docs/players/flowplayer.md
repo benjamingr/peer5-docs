@@ -31,8 +31,8 @@ The following information needs to be filled according to your actual data:
         <script src="//api.peer5.com/peer5.flowplayer.plugin.js"></script>
 
         <!-- Flowplayer scripts & styles -->
-        <script src="//releases.flowplayer.org/6.0.5/flowplayer.min.js"></script>
-        <link href="//releases.flowplayer.org/6.0.5/skin/minimalist.css" rel="stylesheet">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/flowplayer/7.0.4/flowplayer.min.js"></script>
+        <link href="//cdnjs.cloudflare.com/ajax/libs/flowplayer/7.0.4/skin/skin.min.css" rel="stylesheet">
     </head>
     <body>
         <div id="player"></div>
