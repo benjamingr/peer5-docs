@@ -43,10 +43,10 @@ You can test your playlist file [here](https://app.peer5.com/integration)
 In order to achieve higher p2p throughput, we recommend the following configurations:
 
 1. Playlist length - 30 seconds or more
-2. Number of segments - 10 or more
-3. Segment size - under 1MB 
+2. Number of segments - 20
+3. Segment size - 4 seconds
 4. URL randomization and protection - We work with many of the schemes for content protection.
-To identify media files and connect users, we use the url without a querystring by default. 
+To identify media files and connect users, the steram urls are used without their query parameters by default. 
 
 **Example I:** user A gets 1.ts?id=xyz and user B gets 1.ts?id=abc  
 We will remove the dynamic URL and will be able to connect between users.
