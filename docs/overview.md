@@ -44,7 +44,7 @@ In order to achieve higher p2p throughput, we recommend the following configurat
 
 1. Playlist length - 30 seconds or more
 2. Number of segments - 20
-3. Segment size - 4 seconds
+3. Segment length - ~4 seconds
 4. URL randomization and protection - We work with many of the schemes for content protection.
 To identify media files and connect users, the steram urls are used without their query parameters by default. 
 
