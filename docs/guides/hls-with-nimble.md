@@ -44,7 +44,7 @@ Peer5 needs CORS to get the video segments from your server:
 	![](./images/nimble/image03.png)
 	<br/><br/><br/>
 	
-2. Under Global tab -  Set chunk duration to `3` and Chunk count to `10`. Then press Save.
+2. Under Global tab -  Set chunk duration to `4` and Chunk count to `20`. Then press Save.
 	<br/><br/><br/>
 	![](./images/nimble/image06.png)
 	<br/><br/><br/>
