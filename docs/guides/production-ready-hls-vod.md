@@ -1,8 +1,12 @@
 # Creating A Production Ready Multi Bitrate HLS VOD stream
 
-[HLS](https://en.wikipedia.org/wiki/HTTP_Live_Streaming) is one of the most prominent video streaming formats on desktop and mobile browsers. `ffmpeg` is a powerful tool that supports conversion of various video formats from one to another, including HLS both as input and output.
+[HLS](https://en.wikipedia.org/wiki/HTTP_Live_Streaming) is one of the most prominent video streaming formats on desktop and mobile browsers.
+Since end users have different screen sizes and different network performance, we want to create multiple renditions of
+the video with different resolutions and bitrates that can be switched seamlessly, this concept is called MBR (Multi Bit Rate).  
+For this task we will use [`ffmpeg`](https://en.wikipedia.org/wiki/FFmpeg),
+a powerful tool that supports conversion of various video formats from one to another, including HLS both as input and output.
 
-This guide will show a real world use of [`ffmpeg`](https://en.wikipedia.org/wiki/FFmpeg) to create multi bitrate HLS VOD stream.
+In this guide will show a real world use of `ffmpeg` to create MBR HLS VOD stream from a static input file.
 
 ## Installing FFMPEG
 
@@ -12,11 +16,11 @@ This guide will show a real world use of [`ffmpeg`](https://en.wikipedia.org/wik
 - Download latest version from [here](http://ffmpeg.zeranoe.com/builds/)
 - Unzip the archive to a folder
 - Open a command prompt in the unzipped folder
-- run `./ffmpeg` - you should see ffmpeg version and build information
+- Run `./ffmpeg` - you should see ffmpeg version and build information
 ### OS X
 - Install [homebrew](https://brew.sh/)
 - Run `brew install ffmpeg` (extra options can be seen by running `brew options ffmpeg`)
-- run `./ffmpeg` - you should see `ffmpeg` version and build information
+- Run `./ffmpeg` - you should see `ffmpeg` version and build information
 ### Ubuntu
     sudo add-apt-repository ppa:mc3man/trusty-media  
     sudo apt-get update  
@@ -43,11 +47,7 @@ and one AC3 audio stream 48kHz 640 kbps.
 
 ### First rendition
 
-Since end users have different screen sizes and different network performance, we want to create multiple renditions of
-the video with different resolutions and bitrates that can be switched seamlessly, this concept is called MBR (Multi Bit Rate).  
-`ffmpeg` expects parameters for every rendition you want to create.
-
-Lets build a command for one rendition
+Lets build a command for one rendition:
 ```
 ffmpeg -i beach.mkv -vf scale=w=1280:h=720:force_original_aspect_ratio=decrease -c:a aac -ar 48000 -b:a 128k -c:v h264 -profile:v main -crf 20 -g 48 -keyint_min 48 -sc_threshold 0 -b:v 2500k -maxrate 2675k -bufsize 3750k -hls_time 4 -hls_playlist_type vod -hls_segment_filename beach/720p_%03d.ts beach/720p.m3u8
 ```
@@ -60,21 +60,21 @@ ffmpeg -i beach.mkv -vf scale=w=1280:h=720:force_original_aspect_ratio=decrease 
 - `-crf 20` - Constant Rate Factor, high level factor for overall quality
 - `-g 48 -keyint_min 48` - **IMPORTANT** create key frame (I-frame) every 48 frames (~2 seconds) - will later affect correct slicing of segments and alignment of renditions
 - `-sc_threshold 0` - don't create  key frames on scene change - only according to `-g`
-- `-b:v 2400k -maxrate 2500k -bufsize 4800k` - limit video bitrate, these are rendition specific and depends on your content type - [read more](#how-to-choose-the-right-bitrate)
+- `-b:v 2500k -maxrate 2675k -bufsize 3750k` - limit video bitrate, these are rendition specific and depends on your content type - [read more](#how-to-choose-the-right-bitrate)
 - `-hls_time 4` - segment target duration in seconds - the actual length is constrained by key frames
 - `-hls_playlist_type vod` - adds the `#EXT-X-PLAYLIST-TYPE:VOD` tag and keeps all segments in the playlist
 - `-hls_segment_filename beach/720p_%03d.ts` - explicitly define segments files names
 - `beach/720p.m3u8` - path of the playlist file - also tells ffmpeg to output HLS (`.m3u8`)
 
-this will generate a VOD HLS playlist and segments in `beach` folder
+This will generate a VOD HLS playlist and segments in `beach` folder.
 
 ### Multiple renditions
 
-each rendition can be generated separately or they can all be generated in parallel with one command.  
-its very important that besides the resolution and bitrate parameters the command will be identical so that the renditions will be properly aligned,
+Each rendition requires its own parameters, though `ffmpeg` supports multiple inputs and outputs so all the renditions can be generated in parallel with one long command.  
+it's very important that besides the resolution and bitrate parameters the commands will be identical so that the renditions will be properly aligned,
 meaning key frames will be set in the exact same positions to allow smooth switching between them on the fly.
 
-I will create 4 renditions with common resolutions:
+We will create 4 renditions with common resolutions:
 
 - `1080p` 1920x1080 <small>(original)</small>
 - `720p` 1280x720
@@ -91,7 +91,7 @@ ffmpeg -hide_banner -y -i beach.mkv \
 
 ### Master playlist
 
-The HLS player needs to know that there are multiple renditions of our video, so we create an HLS master playlist to point them,
+The HLS player needs to know that there are multiple renditions of our video, so we create an HLS master playlist to point them
 and save it along side the other playlists and segments.
 
 **playlist.m3u8**
@@ -110,9 +110,9 @@ and save it along side the other playlists and segments.
 
 ### Example Conversion Script
 
-here is an example conversion script [create-hls-vod.sh](https://gist.github.com/mrbar42/ae111731906f958b396f30906004b3fa)
+Here is an example conversion script [create-hls-vod.sh](https://gist.github.com/mrbar42/ae111731906f958b396f30906004b3fa)
 
-running:
+Running:
 
 ```
 bash create-vod-hls.sh beach.mkv
@@ -140,11 +140,14 @@ will produce:
 
 ## How to choose the right bitrate
 
-bitrate is dependant on the resolution and the content type. a video with a lot of movement and rapid changes in picture
-will be more affected by low bitrate while a video like a music concert or an interview which are mostly static
-will suffice a much lower bitrate without apparent changes to quality.
+Bitrate is dependant mostly on the resolution and the content type.
+when setting bitrate too low an image pixelization will occur especially in areas where there is rapid movement,
+when bitrate is too high the output files might be excessively big with any additional value.
 
-here are some good defaults to start from
+To choose the right bitrate one must understand his type of content. content with high motion such as sports or news events will require higher
+bitrate to avoid pixelization while low motion content such as music concerts and interviews will suffice lower bitrate without apparent changes to quality.
+
+Here are some good defaults to start from:
 
 Quality | Resolution | bitrate - low motion | bitrate - high motion | audio bitrate
 :- | :-: | -: | -: | -:
