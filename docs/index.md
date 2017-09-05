@@ -26,3 +26,4 @@
     - [Setting up CORS](guides/cors/)
     - [Migrate From Flash](guides/migrate-from-flash/)
     - [Use NGINX as warm Wowza cache](guides/use-nginx-as-wowza-cache/)
+    - [Creating A Production Ready Multi Bitrate HLS VOD stream](guides/production-ready-hls-vod/)
