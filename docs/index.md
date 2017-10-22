@@ -9,7 +9,9 @@
 - **Players Integration**
     - [Clappr](players/clappr/)
     - [VideoJS](players/videojs/)
+    - [VideoJS DASH](players/videojs-dash/)
     - [JWPlayer](players/jwplayer-7/)
+    - [JWPlayer DASH](players/jwplayer-dash/)
     - [Flowplayer](players/flowplayer/)
     - [Shaka Player](players/shaka-player/)
     - [Kaltura](players/kaltura/)
@@ -17,6 +19,7 @@
     - [Bitmovin](players/bitmovin/)
     - [Theoplayer](players/theoplayer/)
     - [Hls.js](players/hls.js/)
+    - [Dash.js](players/dash.js/)
 - **Custom Integration Cases**
     - [Google Tag Manager](guides/google-tag-manager/)
 - **Guides**

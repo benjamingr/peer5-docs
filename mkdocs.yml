@@ -12,7 +12,9 @@ pages:
 - Players:
     - 'Clappr': 'players/clappr.md'
     - 'VideoJS': 'players/videojs.md'
+    - 'VideoJS DASH': 'players/videojs-dash.md'
     - 'JWPlayer': 'players/jwplayer-7.md'
+    - 'JWPlayer DASH': 'players/jwplayer-dash.md'
     - 'Flowplayer': 'players/flowplayer.md'
     - 'Shaka Player': 'players/shaka-player.md'
     - 'Kaltura': 'players/kaltura.md'
@@ -20,6 +22,7 @@ pages:
     - 'Bitmovin': 'players/bitmovin.md'
     - 'Theoplayer': 'players/theoplayer.md'
     - 'Hls.js': 'players/hls.js.md'
+    - 'Dash.js': 'players/dash.js.md'
 - Guides:
     - 'HLS with Nimble': 'guides/hls-with-nimble.md'
     - 'How to optimize Wowza server': 'guides/how-to-optimize-wowza-server.md'
