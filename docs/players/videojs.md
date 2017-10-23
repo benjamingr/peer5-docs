@@ -1,13 +1,13 @@
-# VideoJS with Peer5 for HLS integration
+# Video.js with Peer5 for HLS integration
 
 <br>
 ![](./images/videojs.png)
 <br><br>
-[VideoJS](http://videojs.com/) is a free and open source HTML5 video player that supports HLS.
+[Video.js](http://videojs.com/) is a free and open source HTML5 video player that supports HLS.
 
 The integration with Peer5 plugin is as easy as it can get.
 
-In addition to the player script, include Peer5 client and VideoJS plugin.
+In addition to the player script, include Peer5 client and Video.js plugin.
  
 ## Peer5 client and plugins scripts
 add these two scripts to the `head` of your player's page
@@ -27,12 +27,12 @@ The following information needs to be filled according to your actual data:
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>VideoJS Player test</title>
+        <title>Video.js Player test</title>
         <!-- peer5 client & plugin -->
         <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
         <script src="//api.peer5.com/peer5.videojs5.plugin.js"></script>
     
-        <!-- videojs5 scripts & styles -->
+        <!-- Video.js5 scripts & styles -->
         <link href="//vjs.zencdn.net/5.19.0/video-js.css" rel="stylesheet">
         <script src="//vjs.zencdn.net/5.19.0/video.js"></script>
         <script src="//cdn.jsdelivr.net/npm/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
@@ -49,4 +49,4 @@ The following information needs to be filled according to your actual data:
     </html>
 ```
 
-Visit the full VideoJS docs [here](http://docs.videojs.com/)
+Visit the full Video.js docs [here](http://docs.videojs.com/)

@@ -44,7 +44,7 @@ The following information needs to be filled according to your actual data:
     <script src="//api.peer5.com/peer5.jwplayer7.dash.plugin.js"></script>
 
     <!-- jwplayer - You can change to your self hosted script -->
-    <script src="//ssl.p.jwpcdn.com/player/v/7.6.0/jwplayer.js"></script>
+    <script src="//ssl.p.jwpcdn.com/player/v/7.12.0/jwplayer.js"></script>
 
     <!-- jwplayer license key -->
     <script>jwplayer.key = 'JWPLAYER_KEY';</script>

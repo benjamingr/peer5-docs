@@ -8,9 +8,9 @@
     - [F.A.Q](faq/)
 - **Players Integration**
     - [Clappr](players/clappr/)
-    - [VideoJS](players/videojs/)
-    - [VideoJS DASH](players/videojs-dash/)
-    - [JWPlayer](players/jwplayer-7/)
+    - [Video.js HLS](players/videojs/)
+    - [Video.js DASH](players/videojs-dash/)
+    - [JWPlayer HLS](players/jwplayer-7/)
     - [JWPlayer DASH](players/jwplayer-dash/)
     - [Flowplayer](players/flowplayer/)
     - [Shaka Player](players/shaka-player/)
