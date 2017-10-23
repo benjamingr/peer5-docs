@@ -11,9 +11,9 @@ pages:
 - FAQ: 'faq.md'
 - Players:
     - 'Clappr': 'players/clappr.md'
-    - 'VideoJS': 'players/videojs.md'
-    - 'VideoJS DASH': 'players/videojs-dash.md'
-    - 'JWPlayer': 'players/jwplayer-7.md'
+    - 'Video.js HLS': 'players/videojs.md'
+    - 'Video.js DASH': 'players/videojs-dash.md'
+    - 'JWPlayer HLS': 'players/jwplayer-7.md'
     - 'JWPlayer DASH': 'players/jwplayer-dash.md'
     - 'Flowplayer': 'players/flowplayer.md'
     - 'Shaka Player': 'players/shaka-player.md'
