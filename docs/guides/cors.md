@@ -26,7 +26,6 @@ for best performance it is required that your video server will respond with the
   
   - `'Access-Control-Allow-Origin'`: `'*'`
   - `'Access-Control-Allow-Methods'`: `'GET, HEAD, OPTIONS'`
-  - `'Access-Control-Allow-Headers'`: `'Range'`
   - `'Content-Length'`: `'0'`  
     
 status: `200` | `204`
