@@ -22,6 +22,7 @@
     - [Dash.js](players/dash.js/)
 - **Custom Integration Cases**
     - [Google Tag Manager](guides/google-tag-manager/)
+    - [Android](guides/android)
 - **Guides**
     - [HLS with Nimble](guides/hls-with-nimble/)
     - [How to optimize Wowza server](guides/how-to-optimize-wowza-server/)
