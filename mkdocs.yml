@@ -43,6 +43,7 @@ pages:
     - 'Android Integration': 'platforms/android.md'
     - 'iOS and tvOS Integration': 'platforms/ios.md'
     - 'Chromecast Integration': 'platforms/chromecast.md'
+    - 'Progressive Web Apps Integration': 'platforms/pwa.md'
 - APIs:
     - '.getStats()': 'apis/get-stats.md'
     - '.configure()': 'apis/configuring-peer5.md'
