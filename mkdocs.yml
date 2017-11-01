@@ -32,7 +32,11 @@ pages:
     - 'Use NGINX as warm Wowza cache': 'guides/use-nginx-as-wowza-cache.md'
     - 'Google Tag Manager': 'guides/google-tag-manager.md'
     - 'Creating A Production Ready Multi Bitrate HLS VOD stream': 'guides/production-ready-hls-vod.md'
-    - 'Android Integration': 'guides/android.md'
+- Platforms:
+    - 'HTML5 Integration': 'platforms/web.md'
+    - 'Android Integration': 'platforms/android.md'
+    - 'iOS and tvOS Integration': 'platforms/ios.md'
+    - 'Chromecast Integration': 'platforms/chromecast.md'
 - APIs:
     - '.getStats()': 'apis/get-stats.md'
     - '.configure()': 'apis/configuring-peer5.md'
