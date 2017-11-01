@@ -1,8 +1,52 @@
 
+body {
+    background: #fff;
+}
+
+.col-md-9 img {
+    border: none !important;
+}
+
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    white-space: nowrap;
+    background-color: #f9f2f4;
+    border-radius: 0;
+}
+
+pre {
+    display: block;
+    padding: 10px;
+    margin: 0 0 10.5px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    border-radius: 0;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #fff;
+    background-color: #272727;
+}
+
+.well {
+    background: white;
+}
+
 .logo {
-    width:200px;
-    float:right;
-    margin-top:15px;
+    width: 200px;
+    float: right;
+    margin-top: 15px;
 }
 
 .nav-logo {
@@ -12,6 +56,43 @@
 .navbar-brand {
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+.navbar {
+    background: #343838;
+    border-bottom: 8px #ebf2f2 solid;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #272727;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #fff;
+    background-color: #272727;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #272727;
+}
+
+/* these two media queries fix an issue where the navbar becomes two lines high by hiding right navbar buttons */
+@media (max-width: 1199px) {
+    ul.nav.navbar-nav.navbar-right li:nth-child(2),
+    ul.nav.navbar-nav.navbar-right li:nth-child(3),
+    ul.nav.navbar-nav.navbar-right li:nth-child(4) {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    ul.nav.navbar-nav.navbar-right li:nth-child(2),
+    ul.nav.navbar-nav.navbar-right li:nth-child(3),
+    ul.nav.navbar-nav.navbar-right li:nth-child(4) {
+        display: block;
+    }
 }
 
 @media (max-width: 991px) {

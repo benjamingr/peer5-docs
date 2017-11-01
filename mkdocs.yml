@@ -1,10 +1,16 @@
+strict: true
 site_name: Peer5 Docs
-theme_dir: 'cinder'
+theme:
+  name: mkdocs
+  theme_dir: ./cinder
 repo_url: https://github.com/peer5/peer5-docs
 site_url: https://docs.peer5.com
 site_description: 'Peer5 documentation'
-site_favicon: favicon.ico
 google_analytics: ['UA-30916189-1', 'docs.peer5.com']
+extra_javascript:
+  - js/extra.js
+extra_css:
+  - css/extra.css
 pages:
 - Home: 'index.md'
 - Overview: 'overview.md'
