@@ -1,38 +1,44 @@
+strict: true
 site_name: Peer5 Docs
-theme_dir: 'cinder'
+theme:
+  name: mkdocs
+  theme_dir: ./cinder
 repo_url: https://github.com/peer5/peer5-docs
 site_url: https://docs.peer5.com
 site_description: 'Peer5 documentation'
-site_favicon: favicon.ico
 google_analytics: ['UA-30916189-1', 'docs.peer5.com']
+extra_javascript:
+  - js/extra.js
+extra_css:
+  - css/extra.css
 pages:
-- Home: 'index.md'
-- Overview: 'overview.md'
-- FAQ: 'faq.md'
-- Players:
-    - 'Clappr': 'players/clappr.md'
-    - 'Video.js HLS': 'players/videojs.md'
-    - 'Video.js DASH': 'players/videojs-dash.md'
-    - 'JWPlayer HLS': 'players/jwplayer-7.md'
-    - 'JWPlayer DASH': 'players/jwplayer-dash.md'
-    - 'Flowplayer': 'players/flowplayer.md'
-    - 'Shaka Player': 'players/shaka-player.md'
-    - 'Kaltura': 'players/kaltura.md'
-    - 'Radiant': 'players/radiant.md'
-    - 'Bitmovin': 'players/bitmovin.md'
-    - 'Theoplayer': 'players/theoplayer.md'
-    - 'Hls.js': 'players/hls.js.md'
-    - 'Dash.js': 'players/dash.js.md'
-- Guides:
-    - 'HLS with Nimble': 'guides/hls-with-nimble.md'
-    - 'How to optimize Wowza server': 'guides/how-to-optimize-wowza-server.md'
-    - 'Setting up HLS live streaming server using NGINX': 'guides/setting-up-hls-live-streaming-server-using-nginx.md'
-    - 'Configure CORS headers': 'guides/cors.md'
-    - 'Migrate From Flash': 'guides/migrate-from-flash.md'
-    - 'Use NGINX as warm Wowza cache': 'guides/use-nginx-as-wowza-cache.md'
-    - 'Google Tag Manager': 'guides/google-tag-manager.md'
-    - 'Creating A Production Ready Multi Bitrate HLS VOD stream': 'guides/production-ready-hls-vod.md'
-    - 'Android Integration': 'guides/android.md'
-- APIs:
-    - '.getStats()': 'apis/get-stats.md'
-    - '.configure()': 'apis/configuring-peer5.md'
+  - Home: 'index.md'
+  - Overview: 'overview.md'
+  - FAQ: 'faq.md'
+  - Players:
+      - 'Clappr': 'players/clappr.md'
+      - 'Video.js HLS': 'players/videojs.md'
+      - 'Video.js DASH': 'players/videojs-dash.md'
+      - 'JWPlayer HLS': 'players/jwplayer-7.md'
+      - 'JWPlayer DASH': 'players/jwplayer-dash.md'
+      - 'Flowplayer': 'players/flowplayer.md'
+      - 'Shaka Player': 'players/shaka-player.md'
+      - 'Kaltura': 'players/kaltura.md'
+      - 'Radiant': 'players/radiant.md'
+      - 'Bitmovin': 'players/bitmovin.md'
+      - 'Theoplayer': 'players/theoplayer.md'
+      - 'Hls.js': 'players/hls.js.md'
+      - 'Dash.js': 'players/dash.js.md'
+  - Guides:
+      - 'HLS with Nimble': 'guides/hls-with-nimble.md'
+      - 'How to optimize Wowza server': 'guides/how-to-optimize-wowza-server.md'
+      - 'Setting up HLS live streaming server using NGINX': 'guides/setting-up-hls-live-streaming-server-using-nginx.md'
+      - 'Configure CORS headers': 'guides/cors.md'
+      - 'Migrate From Flash': 'guides/migrate-from-flash.md'
+      - 'Use NGINX as warm Wowza cache': 'guides/use-nginx-as-wowza-cache.md'
+      - 'Google Tag Manager': 'guides/google-tag-manager.md'
+      - 'Creating A Production Ready Multi Bitrate HLS VOD stream': 'guides/production-ready-hls-vod.md'
+      - 'Android Integration': 'guides/android.md'
+  - APIs:
+      - '.getStats()': 'apis/get-stats.md'
+      - '.configure()': 'apis/configuring-peer5.md'
