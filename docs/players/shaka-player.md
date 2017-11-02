@@ -2,7 +2,7 @@
 
 ![](./images/shaka-player.png)
 
-[Shaka Player](https://github.com/google/shaka-player) is a free and open source HTML5 video player that supports playing [MPEG-DASH](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP) without any plugin.
+[Shaka Player](https://github.com/google/shaka-player) is a free and open source HTML5 video player that supports playing [MPEG-DASH](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP) without any plugin. In addition Shaka plays [HLS](https://en.wikipedia.org/wiki/HTTP_Live_Streaming) video on the [Chromecast](/platforms/chromecast).
 
 The integration with Peer5 plugin is as easy as it can get.
  
@@ -16,7 +16,7 @@ The integration with Peer5 plugin is as easy as it can get.
 The following information needs to be filled according to your actual data:
  
 - `PEER5_API_KEY` &nbsp;&nbsp;your [Peer5 API key](https://app.peer5.com/integration)
-- `MANIFEST_FILE` &nbsp;&nbsp;url to your `.mpd` file
+- `MANIFEST_FILE` &nbsp;&nbsp;url to your `.mpd` file (or `.m3u8` on the Chromecast)
   
 ```html
 <!DOCTYPE html>
