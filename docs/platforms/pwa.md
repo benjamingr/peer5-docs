@@ -6,7 +6,7 @@ At Peer5, we are big believers in Progressive Web Apps as they deliver a native-
 
 This guide assumes that you already have a media server that can output HLS or DASH streams. If this is not the case, we have a guide that explains how to set that up [for live video](guides/setting-up-hls-live-streaming-server-using-nginx/) as well as [for VoD](guides/production-ready-hls-vod/). In addition to nginx / nimble / ffmpeg, we also support (and recommend) [Wowza](guides/how-to-optimize-wowza-server/).
 
-In order to integrate Peer5 with your PWA, you first need to choose a video player. Peer5 supports virtually every HTML5 player. Among the free options, we recommend [Clappr](players/clappr/) or [Video.js](players/videojs/). Among the paid options, popular choices are [JWPlayer](players/jwplayer-7/) and [Bitmovin](players/bitmovin/).
+In order to integrate Peer5 with your PWA, you first need to choose a video player. Peer5 supports every HTML5 player. Among the free options, we recommend [Clappr](players/clappr/) or [Video.js](players/videojs/). Among the paid options, popular choices are [JWPlayer](players/jwplayer-7/) and [Bitmovin](players/bitmovin/).
 
 Then, [register with Peer5](https://app.peer5.com/register), obtain your API key (available in the [integration tab](https://app.peer5.com/integration)) and complete integration according to the details there.
 
