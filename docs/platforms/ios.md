@@ -6,7 +6,7 @@ Peer5 integrates with iOS and tvOS apps in a straightforward and simple way. Pee
 
 Since a hybrid application is just an HTML5 application in disguise, Peer5 will work out of the box with any hybrid application. In the same page or view in which you initialize your video player, simply include the Peer5 scripts.
 
-Delivery of content via P2P will work on all Apple devices running iOS 11.0 and up and tvOS [x.x] and up (versions with WebRTC support). 
+Delivery of content via P2P will work on all Apple devices running iOS 11.0 and up and tvOS 11.0 and up (versions with WebRTC support). Peer5's SDK falls back on native video delivery on older versions of iOS and tvOS as well.
 
 ### React Native Application
 
