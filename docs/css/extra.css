@@ -116,10 +116,18 @@ pre {
     }
 }*/
 
+span.md-logo {
+    width: inherit !important;
+}
 .md-logo > img {
     height: 25px;
+    width: inherit;
 }
 
 [data-md-color-primary=blue-grey] .md-typeset a {
     color: #ff7043;
+}
+
+.md-main__inner {
+    padding-bottom: 3rem;
 }
