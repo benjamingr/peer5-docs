@@ -10,7 +10,7 @@ jwplayer is used through out the examples, but the methods apply to all players
 ## 1. Create player in external script
 
 player.js
-```
+```js
 jwplayer.key = 'JWPLAYER_KEY';
 
 var player = jwplayer('player').setup({
@@ -20,7 +20,7 @@ var player = jwplayer('player').setup({
 
 
 Custom HTML tag (in GTM dashboard)
-```
+```html
 <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
 <script src="//api.peer5.com/peer5.jwplayer7.plugin.js"></script>
 <script src="//ssl.p.jwpcdn.com/player/v/7.8.1/jwplayer.js"></script>
@@ -30,7 +30,7 @@ Custom HTML tag (in GTM dashboard)
 ## 2. Initiate player inline
 
 index.html
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +62,7 @@ index.html
 
 
 Custom HTML tag (in GTM dashboard)
-```
+```html
 <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
 <script src="//api.peer5.com/peer5.jwplayer7.plugin.js"></script>
 <script src="//ssl.p.jwpcdn.com/player/v/7.8.1/jwplayer.js"></script>

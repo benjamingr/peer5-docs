@@ -7,10 +7,11 @@
 The integration with Peer5 plugin is as easy as it can get.
  
 ## Peer5 client and player scripts
+```html
+<script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+<script src="//api.peer5.com/peer5.shakaplayer.plugin.js"></script>
+```
 
-    <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-    <script src="//api.peer5.com/peer5.shakaplayer.plugin.js"></script>
-    
 ## Complete Example 
  
 The following information needs to be filled according to your actual data:
@@ -47,5 +48,6 @@ The following information needs to be filled according to your actual data:
   </body>
 </html>
 ```
+
 
 Visit [here](https://github.com/google/shaka-player) for the full Shaka Player docs

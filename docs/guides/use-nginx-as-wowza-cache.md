@@ -82,7 +82,7 @@ multiple servers can be added - one per line (don't forget the semi-colon)
 
 replace `/etc/nginx/nginx.conf` completely with this  
 <small>(The config might be on `/usr/local/nginx/conf/nginx.conf` on certain platforms)</small>
-```
+```nginx
 user nginx;
 worker_processes auto;
 pid /var/run/nginx.pid;

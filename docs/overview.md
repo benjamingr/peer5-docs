@@ -128,5 +128,5 @@ Peer5 is extremely UX focused, and for that reason, on mobile, we only enable co
  We do this in order to optimize streams and minimize resource usage. 
 
 ## Stats API
-To monitor statistics from the client side, one can use [peer5.getStats()](./apis/get-stats.md),
+To monitor statistics from the client side, one can use [peer5.getStats()](client-api/get-stats.md),
  which returns a JSON object with different metrics relating to the performance of the p2p network.

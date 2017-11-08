@@ -10,10 +10,11 @@ In addition to the player script, include the Peer5 client and the Peer5 dash.js
  
 ## Peer5 client and plugins scripts
 Add these two scripts to the `head` of your player's page
+```html
+<script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+<script src="//api.peer5.com/peer5.dash.plugin.js"></script>
+```
 
-     <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-     <script src="//api.peer5.com/peer5.dash.plugin.js"></script>
-    
 ## Complete Example
  
 The following information needs to be filled according to your actual data:
@@ -22,23 +23,23 @@ The following information needs to be filled according to your actual data:
 - `MANIFEST_FILE` &nbsp;&nbsp;url to your `.mpd` file
   
 ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Dash.js Player test</title>
-        <!-- peer5 client & plugin -->
-        <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-        <script src="//api.peer5.com/peer5.dashjs.plugin.js"></script>
-        
-        <!-- Dash.js script -->
-        <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
-        
-    </head>
-    <body>
-        <video data-dashjs-player autoplay src="MANIFEST_FILE" controls></video>
-    </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dash.js Player test</title>
+    <!-- peer5 client & plugin -->
+    <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+    <script src="//api.peer5.com/peer5.dashjs.plugin.js"></script>
+    
+    <!-- Dash.js script -->
+    <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+    
+</head>
+<body>
+    <video data-dashjs-player autoplay src="MANIFEST_FILE" controls></video>
+</body>
+</html>
 ```
 
 

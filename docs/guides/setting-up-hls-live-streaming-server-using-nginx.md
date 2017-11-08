@@ -46,7 +46,7 @@ Which will later be available as `http://localhost:8080/hls/stream.m3u8`
 
 For good HLS experience we recommend using 3 seconds fragments with 60 seconds playlist.  
 
-```
+```nginx
 rtmp {
     server {
         listen 1935; # Listen on standard RTMP port
@@ -74,7 +74,7 @@ __http server config__
 
 Since hls consists of static files, a simple http server can be set up with two additions, correct MIME types and CORS headers.
 
-```
+```nginx
 server {
     listen 8080;
 
@@ -110,7 +110,7 @@ __the complete nginx.conf__
 
 The default location for nginx conf is `/usr/local/nginx/conf/nginx.conf` or `/etc/nginx/nginx.conf`
 
-```
+```nginx
 worker_processes  auto;
 events {
     worker_connections  1024;
@@ -211,7 +211,7 @@ For a proper HLS stream the video codec should be [`x264`](https://en.wikipedia.
  if you have an existing rtmp stream in the correct codec, you can skip ffmpeg and tell nginx to pull the stream directly.
  In order to do so add a `pull` directive under `application` section in nginx.conf like so:
  
-```
+```nginx
 application show {
     live on;
     pull rtmp://example.com:4567/sports/channel3 live=1;
@@ -327,4 +327,4 @@ Now that we are pushing an HLS stream into nginx, we need to make the most of yo
 
 To do this, add a P2P layer on top of your servers to maximize your site's scalability and ability to deliver high-quality video streams. Adding Peer5 on top of your nginx server will do all of this and more. With nginx and CORS already set up, integrating Peer5 is as simple as grabbing some JavaScript and clicking copy-and-paste.
 
-[ADD PEERS NOW](https://app.peer5.com/register)
+[ADD PEER5 NOW](https://app.peer5.com/register)

@@ -5,7 +5,7 @@ If don't already have a running Wowza server please follow one of the following 
 - [Getting started](https://www.wowza.com/forums/content.php?721-getting-started) with Wowza Streaming Cloud
 - [Getting started](https://www.wowza.com/forums/content.php?625-How-to-get-started-as-a-Wowza-Streaming-Engine-Manager-administrator) with Wowza Streaming Engine (self hosted)
 
-*This guide assumes HLS, DASH integration is performed in a similar fashion.
+**This guide assumes HLS is being setup. DASH integration is performed in a similar fashion.**
 
 In order for end-users to efficiently transmit segments a few configuration changes are required. The default number of segments, the segment length and the number of chunks can improve overall user experience and peer-to-peer performance.
 

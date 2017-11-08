@@ -37,7 +37,7 @@ MediaElement.js     | Yes               | Yes               | No                
 Starting with v7.4.2 its possible to enable HTML5 rendering for HLS - hence v7.4.2 is the minimal version necessary for HTML5 HLS playback.
 To configure JWPlayer v7 to use HTML5 by default, add the following config tags to your player initiation
 
-```
+```js
 {
   primary: 'html5',
   hlshtml: true
