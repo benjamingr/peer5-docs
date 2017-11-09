@@ -11,10 +11,11 @@ In addition to the player script, include Peer5 client and Bitmovin plugin.
  
 ## Peer5 client and plugins scripts
 add these two scripts to the `head` of your player's page
+```html
+<script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+<script src="//api.peer5.com/peer5.bitmovin.plugin.js"></script>
+```
 
-     <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-     <script src="//api.peer5.com/peer5.bitmovin.plugin.js"></script>
-    
 ## Complete Example 
  
 The following information needs to be filled according to your actual data:
@@ -24,38 +25,38 @@ The following information needs to be filled according to your actual data:
 - `BITMOVIN_LICENSE` &nbsp;&nbsp;license from [Bitmovin](https://bitmovin.com)
   
 ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Bitmovin Player test</title>
-        <!-- peer5 client & plugin -->
-        <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-        <script src="//api.peer5.com/peer5.bitmovin.plugin.js"></script>
-        
-        <!-- Bitmovin script -->
-        <script src="//bitmovin-a.akamaihd.net/bitmovin-player/stable/6/bitmovinplayer.min.js"></script>
-        
-    </head>
-    <body>
-        <div id="player"></div>
-        <script type="text/javascript">
-          var conf = {
-            key: "BITMOVIN_LICENSE",
-            source:    {
-              hls: "MANIFEST_FILE"
-            }
-          };
-          var player = bitmovin.player('player');
-     
-          player.setup(conf).then(function(value) {
-            // Success
-          }, function(reason) {
-            // Error!
-          });
-        </script>
-    </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bitmovin Player test</title>
+    <!-- peer5 client & plugin -->
+    <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+    <script src="//api.peer5.com/peer5.bitmovin.plugin.js"></script>
+    
+    <!-- Bitmovin script -->
+    <script src="//bitmovin-a.akamaihd.net/bitmovin-player/stable/6/bitmovinplayer.min.js"></script>
+    
+</head>
+<body>
+    <div id="player"></div>
+    <script type="text/javascript">
+      var conf = {
+        key: "BITMOVIN_LICENSE",
+        source:    {
+          hls: "MANIFEST_FILE"
+        }
+      };
+      var player = bitmovin.player('player');
+ 
+      player.setup(conf).then(function(value) {
+        // Success
+      }, function(reason) {
+        // Error!
+      });
+    </script>
+</body>
+</html>
 ```
 
 

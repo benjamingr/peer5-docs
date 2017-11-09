@@ -9,21 +9,24 @@ In addition to the player script, include Peer5 client and JWPlayer plugin.
  
 ###  Generic DASH Integration
 add these two scripts to the `head` of your player's page
-
-     <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-     <script src="//api.peer5.com/peer5.jwplayer7.dash.plugin.js"></script>
+```html
+<script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+<script src="//api.peer5.com/peer5.jwplayer7.dash.plugin.js"></script>
+```
 
 ### JWPlayer + Dash.js Integration
 add these two scripts to the `head` of your player's page
-
-     <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-     <script src="//api.peer5.com/peer5.jwplayer7.dashjs.plugin.js"></script>
+```html
+<script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+<script src="//api.peer5.com/peer5.jwplayer7.dashjs.plugin.js"></script>
+```
 
 ### JWPlayer + Shakaplayer Integration
 add these two scripts to the `head` of your player's page
-
-     <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-     <script src="//api.peer5.com/peer5.jwplayer7.shakaplayer.plugin.js"></script>
+```html
+<script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+<script src="//api.peer5.com/peer5.jwplayer7.shakaplayer.plugin.js"></script>
+```
 
 ## Complete Example 
  

@@ -7,19 +7,6 @@
 window.JacoRecorder.init("4bba8cf4-2bc3-4583-88cf-212c11e7ce65");
 //@formatter:on
 
-// auto focus on search input
-$(document).ready(function() {
-    $("[data-target='#mkdocs_search_modal']").click(function(e) {
-        setTimeout(function() {
-            $("#mkdocs-search-query").focus()
-        }, 0)
-    });
-
-    var $navbarBrand = $('.navbar-brand');
-    $navbarBrand.html('<img class="nav-logo" src="https://www.peer5.com/images/logo.png">');
-    $navbarBrand.attr('href', '//www.peer5.com');
-});
-
 /** referrer hack */
 (function() {
     var d = document;

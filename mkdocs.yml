@@ -1,49 +1,93 @@
 strict: true
-site_name: Peer5 Docs
-theme:
-  name: mkdocs
-  theme_dir: ./cinder
-repo_url: https://github.com/peer5/peer5-docs
-site_url: https://docs.peer5.com
+
+# project info
+site_name: 'Peer5 Docs'
 site_description: 'Peer5 documentation'
-google_analytics: ['UA-30916189-1', 'docs.peer5.com']
+site_author: 'Peer5'
+site_url: 'https://docs.peer5.com'
+
+# repo info
+repo_name: 'peer5/peer5-docs'
+repo_url: 'https://github.com/peer5/peer5-docs'
+
+# copyright
+copyright: 'Copyright &copy; 2012 - 2017 Peer5'
+
+# theme configuration
+theme:
+  name: 'material'
+  custom_dir: 'theme'
+  language: 'en'
+  palette:
+    primary: 'blue grey'
+  logo: 'images/logo.png'
+
+# extras
+extra:
+  social:
+    - type: 'twitter'
+      link: 'https://twitter.com/peer5'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/company/2555615/'
+
+# ga
+google_analytics:
+  - 'UA-30916189-1'
+  - 'docs.peer5.com'
+
+# extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - toc:
+      permalink: true
+
+# extra files to include in each page
 extra_javascript:
   - js/extra.js
 extra_css:
   - css/extra.css
+
+# pages list
 pages:
 - Home: 'index.md'
 - Overview: 'overview.md'
 - FAQ: 'faq.md'
 - Players:
-    - 'Clappr': 'players/clappr.md'
-    - 'Video.js HLS': 'players/videojs.md'
-    - 'Video.js DASH': 'players/videojs-dash.md'
-    - 'JWPlayer HLS': 'players/jwplayer-7.md'
-    - 'JWPlayer DASH': 'players/jwplayer-dash.md'
-    - 'Flowplayer': 'players/flowplayer.md'
-    - 'Shaka Player': 'players/shaka-player.md'
-    - 'Kaltura': 'players/kaltura.md'
-    - 'Radiant': 'players/radiant.md'
-    - 'Bitmovin': 'players/bitmovin.md'
-    - 'Theoplayer': 'players/theoplayer.md'
-    - 'Hls.js': 'players/hls.js.md'
-    - 'Dash.js': 'players/dash.js.md'
+  - 'Clappr': 'players/clappr.md'
+  - 'Video.js HLS': 'players/videojs.md'
+  - 'Video.js DASH': 'players/videojs-dash.md'
+  - 'JWPlayer HLS': 'players/jwplayer-7.md'
+  - 'JWPlayer DASH': 'players/jwplayer-dash.md'
+  - 'Flowplayer': 'players/flowplayer.md'
+  - 'Shaka Player': 'players/shaka-player.md'
+  - 'Kaltura': 'players/kaltura.md'
+  - 'Radiant': 'players/radiant.md'
+  - 'Bitmovin': 'players/bitmovin.md'
+  - 'Theoplayer': 'players/theoplayer.md'
+  - 'Hls.js': 'players/hls.js.md'
+  - 'Dash.js': 'players/dash.js.md'
 - Guides:
-    - 'HLS with Nimble': 'guides/hls-with-nimble.md'
-    - 'How to optimize Wowza server': 'guides/how-to-optimize-wowza-server.md'
-    - 'Setting up HLS live streaming server using NGINX': 'guides/setting-up-hls-live-streaming-server-using-nginx.md'
-    - 'Configure CORS headers': 'guides/cors.md'
-    - 'Migrate From Flash': 'guides/migrate-from-flash.md'
-    - 'Use NGINX as warm Wowza cache': 'guides/use-nginx-as-wowza-cache.md'
-    - 'Google Tag Manager': 'guides/google-tag-manager.md'
-    - 'Creating A Production Ready Multi Bitrate HLS VOD stream': 'guides/production-ready-hls-vod.md'
+  - 'HLS with Nimble': 'guides/hls-with-nimble.md'
+  - 'How to optimize Wowza server': 'guides/how-to-optimize-wowza-server.md'
+  - 'Setting up HLS live streaming server using NGINX': 'guides/setting-up-hls-live-streaming-server-using-nginx.md'
+  - 'Configure CORS headers': 'guides/cors.md'
+  - 'Migrate From Flash': 'guides/migrate-from-flash.md'
+  - 'Use NGINX as warm Wowza cache': 'guides/use-nginx-as-wowza-cache.md'
+  - 'Google Tag Manager': 'guides/google-tag-manager.md'
+  - 'Creating A Production Ready Multi Bitrate HLS VOD stream': 'guides/production-ready-hls-vod.md'
 - Platforms:
-    - 'HTML5 Integration': 'platforms/web.md'
-    - 'Android Integration': 'platforms/android.md'
-    - 'iOS and tvOS Integration': 'platforms/ios.md'
-    - 'Chromecast Integration': 'platforms/chromecast.md'
-    - 'Progressive Web Apps Integration': 'platforms/pwa.md'
-- APIs:
-    - '.getStats()': 'apis/get-stats.md'
-    - '.configure()': 'apis/configuring-peer5.md'
+  - 'HTML5 Integration': 'platforms/web.md'
+  - 'Android Integration': 'platforms/android.md'
+  - 'iOS and tvOS Integration': 'platforms/ios.md'
+  - 'Chromecast Integration': 'platforms/chromecast.md'
+  - 'Progressive Web Apps Integration': 'platforms/pwa.md'
+- 'Client API':
+  - '.getStats()': 'client-api/get-stats.md'
+  - '.configure()': 'client-api/configuring-peer5.md'
+- 'Server API (beta)':
+  - 'General': 'server-api/general.md'
+  - 'Endpoints':
+    - 'Data export (/export)': 'server-api/endpoints/export.md'

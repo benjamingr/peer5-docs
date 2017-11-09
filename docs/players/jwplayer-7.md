@@ -9,10 +9,11 @@ In addition to the player script, include Peer5 client and JWPlayer plugin.
  
 ## Peer5 client and plugins scripts
 add these two scripts to the `head` of your player's page
+```html
+<script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+<script src="//api.peer5.com/peer5.jwplayer7.plugin.js"></script>
+```
 
-     <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-     <script src="//api.peer5.com/peer5.jwplayer7.plugin.js"></script>
-    
 ## Complete Example 
  
 The following information needs to be filled according to your actual data:
@@ -68,5 +69,6 @@ The following information needs to be filled according to your actual data:
 </body>
 </html>
 ```
+
 
 visit [here](https://developer.jwplayer.com/jw-player/) for the full JWPlayer docs

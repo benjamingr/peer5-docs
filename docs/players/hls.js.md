@@ -10,10 +10,11 @@ In addition to the player script, include the Peer5 client and the Peer5 hls.js 
  
 ## Peer5 client and plugins scripts
 Add these two scripts to the `head` of your player's page
+```html
+<script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+<script src="//api.peer5.com/peer5.hlsjs.plugin.js"></script>
+```
 
-     <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-     <script src="//api.peer5.com/peer5.hlsjs.plugin.js"></script>
-    
 ## Complete Example
  
 The following information needs to be filled according to your actual data:
@@ -22,34 +23,34 @@ The following information needs to be filled according to your actual data:
 - `MANIFEST_FILE` &nbsp;&nbsp;url to your `.m3u8` file
   
 ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Hls.js Player test</title>
-        <!-- peer5 client & plugin -->
-        <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-        <script src="//api.peer5.com/peer5.hlsjs.plugin.js"></script>
-        
-        <!-- Hls.js script -->
-        <script src="//cdn.jsdelivr.net/hls.js/latest/hls.min.js"></script>
-        
-    </head>
-    <body>
-        <video id="player"></video>
-        <script>
-            if (Hls.isSupported()) {
-                var video = document.getElementById('player');
-                var player = new Hls();
-                player.loadSource('MANIFEST_FILE');
-                player.attachMedia(video);
-                player.on(Hls.Events.MANIFEST_PARSED, function() {
-                    video.play();
-                });
-            }
-        </script>
-    </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hls.js Player test</title>
+    <!-- peer5 client & plugin -->
+    <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+    <script src="//api.peer5.com/peer5.hlsjs.plugin.js"></script>
+    
+    <!-- Hls.js script -->
+    <script src="//cdn.jsdelivr.net/hls.js/latest/hls.min.js"></script>
+    
+</head>
+<body>
+    <video id="player"></video>
+    <script>
+        if (Hls.isSupported()) {
+            var video = document.getElementById('player');
+            var player = new Hls();
+            player.loadSource('MANIFEST_FILE');
+            player.attachMedia(video);
+            player.on(Hls.Events.MANIFEST_PARSED, function() {
+                video.play();
+            });
+        }
+    </script>
+</body>
+</html>
 ```
 
 
@@ -62,8 +63,8 @@ If you use bundled setup where `Hls.js` is required without being exposed global
 
 include these scripts
 ```html
-    <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-    <script src="//api.peer5.com/peer5.hlsjs.loader.js"></script>
+<script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+<script src="//api.peer5.com/peer5.hlsjs.loader.js"></script>
 ```
 
 

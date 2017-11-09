@@ -9,9 +9,10 @@ In addition to the player script, include Peer5 client and the flowplayer plugin
  
 ## Peer5 client and plugins scripts
 add these two scripts to the `head` of your player's page
-
-    <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-    <script src="//api.peer5.com/peer5.flowplayer.plugin.js"></script>
+```html
+<script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+<script src="//api.peer5.com/peer5.flowplayer.plugin.js"></script>
+```
 
 ### Complete Example
  
@@ -49,5 +50,6 @@ The following information needs to be filled according to your actual data:
     </body>
     </html>
 ```
+
 
 visit [here](https://flowplayer.org/docs/api.html) for the full Flowplayer docs 
