@@ -29,4 +29,4 @@ In that case just wait some time before making another request. Using an exponen
 
 ## Endpoints
 
-- Data export [/export](server-api/endpoints/export)
+- Data export [/export](endpoints/export)
