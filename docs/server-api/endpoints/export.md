@@ -30,53 +30,17 @@ In addition to the [general rate limits](/server-api/general#limits) set on the 
     - `format=json` for json output (optional, default).
     - `format=csv` for csv output (optional).
 - Request body fields (JSON):
-    - `from` (**Required**) - UTC UNIX timestamp marking the start of the query range
-        - type: `number`
-    - `to` (**Required**) - UTC UNIX timestamp marking the end of the query range
-        - type: `number`
-    - `interval` (**Required**) - Time interval to split data on.  
-        - type: `string`
-        - Available values:
-            - `1m` - 1 minute
-            - `5m` - 5 minutes
-            - `10m` - 10 minutes
-            - `30m` - 30 minutes
-            - `1h` - 1 hour
-            - `3h` - 3 hours
-            - `12h` - 12 hours
-            - `1d` - 1 day
-            - `7d` - 7 days
-            - `14d` - 14 days
-    - `metrics` (**Required**) - The metrics to get data on.
-        - type: `array`
-        - Available values:
-            - `http` - number of bytes delivered via http
-            - `p2p` - number of bytes delivered via p2p
-            - `played` - number of milliseconds the player was playing
-            - `rebuffered` - number of milliseconds the player was buffering
-            - `sessions` - average number of sessions for the given time interval
 
-    - `filters` - Filters to filter data by.  
-        - type: `object` - where the keys are the filter keys (from the available list below),  
-          and the value is an array containing the values you want to filter on.
-        - Available keys:
-            - `browser.name`
-            - `country.code`
-            - `city.name`
-            - `isp.name`
-            - `os.name`
-            - `session.page`
 
-    - `dimensions` - Dimensions to split data by.
-        - type: `array`
-        - Available values:
-            - `browser.name`
-            - `country.code`
-            - `city.name`
-            - `isp.name`
-            - `os.name`
-            - `session.page`
-    
+| name | type | required | notes |
+|------|------|----------|-------|
+| from | number | yes | UTC UNIX timestamp marking the start of the query range<br>**Timestamp must be rounded to the same interval as you are requesting.** |
+|  to  | number | yes | UTC UNIX timestamp marking the start of the query range<br>**Timestamp must be rounded to the same interval as you are requesting.** |
+| interval | string | yes | Time interval to split data by.<br>Available values:<br>- `1m`, `5m` - 1, 5 minutes<br>- `10m`, `30m` - 10, 30 minutes<br>- `1h`, `3h`, `12h` - 1, 3, 12 hours<br>- `1d`, `7d`, `14d` - 1, 7, 14 days|
+| metrics | array | yes | The metrics to get data on.<br>Available values:<br>- `http` - number of bytes delivered via http<br>- `p2p` - number of bytes delivered via p2p<br>- `played` - number of milliseconds the player was playing<br>- `rebuffered` - number of milliseconds the player was buffering<br>- `sessions` - average number of sessions for the given time interval|
+| filters | object | no | Filters to filter data by.<br>The keys of the object are the fields you want to filter by,<br>and the values are the values to filter each field by.<br>Available keys:<br>- `browser.name`<br>- `country.code`<br>- `city.name`<br>- `isp.name`<br>- `os.name`<br>- `session.page`|
+| dimensions | array | no | Dimensions to split data by.<br>Available values:<br>- `browser.name`<br>- `country.code`<br>- `city.name`<br>- `isp.name`<br>- `os.name`<br>- `session.page`|
+
 ## Examples:
 
 ### # Get HTTP & P2P bytes delivered per minute for a given hour range.
